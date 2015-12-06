@@ -34,6 +34,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpAvi">
+      <HintPath>..\3rdParty\SharpAvi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="PeeperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +58,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecordPanel.Designer.cs">
+      <DependentUpon>RecordPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PeeperForm.resx">
       <DependentUpon>PeeperForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +76,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecordPanel.resx">
+      <DependentUpon>RecordPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
